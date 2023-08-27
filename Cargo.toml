@@ -3,8 +3,12 @@ name = "rust101"
 version = "0.1.0"
 edition = "2021"
 
+# lto = true         # Link-time optimization.
+# codegen-units = 1  # Slower compilation but faster code.
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rand = "0.8.5"
+rand = { version = "0.8.5", features = ["small_rng"] }
 rand_distr = "0.4.3"
+statrs =  "0.16.0"
